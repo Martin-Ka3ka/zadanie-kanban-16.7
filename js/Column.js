@@ -1,11 +1,11 @@
 function Column(id, name) {
     var self = this;
-
-    function Column(id, name) {
-        this.id = id;
-        this.name = name || 'No name given';
-    }
-
+    this.id = id;
+    this.name = name || 'No name given';
+    this.element = generateTemplate('column-template', {
+        name: this.name,
+        id: this.id
+    });
     this.element.querySelector('.column').addEventListener('click', function (event) {
         if (event.target.classList.contains('btn-delete')) {
             self.removeColumn();
@@ -16,6 +16,9 @@ function Column(id, name) {
         }
     });
 }
+
+
+
 
 Column.prototype = {
     addCard: function (card) {

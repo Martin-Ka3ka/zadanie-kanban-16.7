@@ -1,9 +1,7 @@
-// KLASA KANBAN CARD
 function Card(id, name) {
     var self = this;
-
+    this.name = name || 'No name given'
     this.id = id;
-    this.name = name;
     this.element = generateTemplate('card-template', {
         description: this.name
     }, 'li');
