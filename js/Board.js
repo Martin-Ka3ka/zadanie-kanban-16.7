@@ -35,6 +35,4 @@ function initSortable(id) {
         sort: true
     });
 
-
-
 }
